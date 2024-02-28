@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pacman</title>
+</head>
+<body style="margin: 0; background-color: black;">
+    <!-- Canvas -->
+    <canvas id="canvas" width="500" height="500"></canvas>
+
+    <!-- Preloaded images -->
+    <div style="display:none;">
+        <img id="animation"  src="images/animations.gif" width="140" height="20">
+        <img id="ghosts" src="images/ghost.png" width="140" height="20">
+        <link rel="stylesheet" href="css/style.css">
+    </div>
+
+    <!-- Start Screen -->
+    <div id="startScreen" class="modal">
+        <div class="modal-content">
+            <h2>Welcome to Pacman!</h2>
+            <p>Use arrow keys or WASD to move Pacman.</p>
+            <p>Eat all the dots while avoiding ghosts.</p>
+            <button id="startButton">Start Game</button>
+        </div>
+    </div>
+
+    <!-- Java Script files for logic -->
+    <script src="js/ghost.js"></script>
+    <script src="js/pacman.js"></script>
+    <script src="js/game.js"></script>
+
+    <!-- JavaScript for interacting with start screen-->
+    <script>
+        // Show the start screen
+        function showStartScreen() {
+            document.getElementById("startScreen").style.display = "block";
+        }
+
+        // Hide the start screen
+        function hideStartScreen() {
+            document.getElementById("startScreen").style.display = "none";
+        }
+
+        // Event listener for the start button
+        document.getElementById("startButton").addEventListener("click", () => {
+            hideStartScreen();
+            // Start the game logic or whatever function you have to begin the game
+        });
+
+        // Call showStartScreen() to display the start screen when the page loads
+        showStartScreen();
+    </script>
+</body>
+</html>
+    </script>
+</body>
+
+</html>
